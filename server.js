@@ -20,7 +20,8 @@ app.post('/',async(req,res)=>{
     };
     try{
         await model.create(data)
-        res.status(200).json("Save");
+        //res.status(200).json(`Thanks ${data.name} :)`);
+        res.render("thanks",{name:data.name})
     }
     catch(err){
         res.status(400).json({mag:err})
