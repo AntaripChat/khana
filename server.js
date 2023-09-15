@@ -2,7 +2,7 @@ const app = require('./app');
 const mongo = require('mongoose')
 const model = require('./model/model');
 
-const port = 8080;
+const port = 8080 || process.env.PORT;
 
 
 mongo.connect('mongodb+srv://khana:AWirfNMH5M6aXIgb@cluster0.0nqdmwn.mongodb.net/?retryWrites=true&w=majority')
